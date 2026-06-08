@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e19cca05d4a4896b24c0f0d5c363f52d372f7a51deee69c8a8d06a0fbaaf2808
-size 566
+{
+    "python.autoComplete.extraPaths": [
+        "/home/locobot/Documents/ros2-metavision-drivers/install/event_camera_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/locobot/Documents/ros2-metavision-drivers/install/event_camera_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
