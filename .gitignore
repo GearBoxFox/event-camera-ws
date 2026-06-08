@@ -1,3 +1,20 @@
 version https://git-lfs.github.com/spec/v1
 oid sha256:043960d9e25965d9080b83811c19030b2bd0b9d8befc988a6878b493f234b5c7
 size 647
+
+calibration/
+
+ext-src/e2calib/python/data/__pycache__/
+
+src/rosbag2/ros2bag/ros2bag/__pycache__/
+
+*.pyc
+
+src/rosbag2/rosbag2_tests/resources/wrong_rmw_test/
+
+src/rosbag2/rosbag2_tests/resources/cdr_test/
+
+src/rosbag2/ros2bag/test/resources/empty_bag/
+
+ext-src/e2calib/python/frames/e2calib/*.png
+ext-src/e2calib/python/build/*
