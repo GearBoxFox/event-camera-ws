@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b64be566a4388252cddd0483627cc0a58ba221b071c340245c5198460d61f4bb
-size 206
+#include "rosbag2_storage_mcap_testdata/msg/BasicIdl.idl"
+
+module rosbag2_storage_mcap_testdata {
+  module msg {
+    struct ComplexIdl {
+      rosbag2_storage_mcap_testdata::msg::BasicIdl a;
+    };
+  };
+};

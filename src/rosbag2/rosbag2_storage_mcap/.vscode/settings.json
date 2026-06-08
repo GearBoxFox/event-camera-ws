@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7c9bad006c9343786ec86ad3efaa9505c1b5d1ffd04f740a1c113fd9fc27fa22
-size 312
+// -*- jsonc -*-
+{
+    "git.alwaysSignOff": true,
+
+    // https://github.com/microsoft/vscode-cpptools/issues/722
+    "C_Cpp.autoAddFileAssociations": false,
+    "C_Cpp.default.cppStandard": "c++17",
+
+    "[cpp]": {
+        "editor.formatOnSave": true
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}",
+}

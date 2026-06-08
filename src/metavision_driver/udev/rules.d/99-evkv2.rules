@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4c4763975556de744ddb67dec35049009797152dc71ef5bed1aa578d80f5d91a
-size 93
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="03fd", ATTR{idProduct}=="5832", MODE="0666"

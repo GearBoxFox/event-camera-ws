@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6cffc36b9b428cbb5406752e39839fc78eed72306b4379669eaf34bff2f5d2ee
-size 164
+# The full path of the file that was finished and closed
+string closed_file
+# The full path of the new file that was opened to continue playback
+string opened_file

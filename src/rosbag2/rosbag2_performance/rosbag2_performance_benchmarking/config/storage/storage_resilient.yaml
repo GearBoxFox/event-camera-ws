@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0386d5fddb897952663aa9f458fbe6ef26ceaf8de0e78b8b11347e78f72577bc
-size 65
+write:
+  pragmas: ["journal_mode = WAL", "synchronous = NORMAL"]

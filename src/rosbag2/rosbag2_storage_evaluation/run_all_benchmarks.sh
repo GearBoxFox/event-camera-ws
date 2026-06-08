@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d6b7c23c37e46150f12d9036925f1758d09780d1f07df0d82f88415fdf71b6ba
-size 737
+#!/usr/bin/env sh
+#  Copyright (c) 2018,  Bosch Software Innovations GmbH.
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+
+cd ./build/bin
+
+./small_messages_benchmark
+./big_messages_benchmark
+./mixed_messages_benchmark
+
+cd ../..
+

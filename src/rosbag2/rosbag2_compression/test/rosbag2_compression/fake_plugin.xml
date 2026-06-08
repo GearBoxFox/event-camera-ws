@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c3a94d1d409f61bb5ceda1e59b55c37b7098869f2593cbf8d0838d19df065fdd
-size 453
+<library path="fake_plugin">
+  <class
+    name="fake_comp"
+    type="FakeCompressor"
+    base_class_type="rosbag2_compression::BaseCompressorInterface"
+  >
+    <description>This is a test compressor plugin.</description>
+  </class>
+
+  <class
+    name="fake_comp"
+    type="FakeDecompressor"
+    base_class_type="rosbag2_compression::BaseDecompressorInterface"
+  >
+    <description>This is a test decompressor plugin.</description>
+  </class>
+</library>

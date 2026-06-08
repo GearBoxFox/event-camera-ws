@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:02059313dc7f5abd3026df991db73bb4893d23d112f76873c7d3342ac8651baf
-size 214
+from setuptools import setup, find_packages
+
+setup(
+    name='e2vid',
+    version='0.1',
+    packages=['e2vid', 'e2vid/base', 'e2vid/model', 'e2vid/options', 'e2vid/utils'],
+    package_dir={'':'reconstruction'}
+)

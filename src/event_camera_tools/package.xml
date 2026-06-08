@@ -1,3 +1,46 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7523179e53bb77cec0bb1f99d8638b9310e69b5e7e05f0ac3196d1d41e4c35fb
-size 2221
+<?xml version="1.0"?>
+<package format="3">
+  <name>event_camera_tools</name>
+  <version>1.0.0</version>
+  <description>package with ROS1 and ROS2 tools related to event_camera_msgs</description>
+  <maintainer email="bernd.pfrommer@gmail.com">Bernd Pfrommer</maintainer>
+  <license>Apache License 2.0</license>
+
+
+  <!-- ROS2 dependencies -->
+  <buildtool_depend condition="$ROS_VERSION == 2">ament_cmake</buildtool_depend>
+  <buildtool_depend condition="$ROS_VERSION == 2">ament_cmake_ros</buildtool_depend>
+  <buildtool_depend condition="$ROS_VERSION == 2">ament_cmake_auto</buildtool_depend>
+  <depend condition="$ROS_VERSION == 2">event_camera_msgs</depend>
+  <depend condition="$ROS_VERSION == 2">event_camera_codecs</depend>
+  <depend condition="$ROS_VERSION == 2">libopencv-dev</depend>
+  <depend condition="$ROS_VERSION == 2">rclcpp</depend>
+  <depend condition="$ROS_VERSION == 2">rclcpp_components</depend>
+  <depend condition="$ROS_VERSION == 2">rosbag2_cpp</depend>
+  <depend condition="$ROS_VERSION == 2">rosbag2_storage</depend>
+  <depend condition="$ROS_VERSION == 2">sensor_msgs</depend>
+  <test_depend condition="$ROS_VERSION == 2">ament_lint_auto</test_depend>
+  <test_depend condition="$ROS_VERSION == 2">ament_lint_common</test_depend>
+  <test_depend condition="$ROS_VERSION == 2">ament_cmake_clang_format</test_depend>
+  <test_depend condition="$ROS_VERSION == 2">ament_cmake_black</test_depend>
+  <test_depend condition="$ROS_VERSION == 2">ament_cmake_test</test_depend>
+
+
+  <!-- ROS1 dependencies -->
+  <buildtool_depend condition="$ROS_VERSION == 1">catkin</buildtool_depend>
+  <depend condition="$ROS_VERSION == 1">nodelet</depend>
+  <depend condition="$ROS_VERSION == 1">roscpp</depend>
+  <depend condition="$ROS_VERSION == 1">rosbag</depend>
+
+  <!-- common ROS1/ROS2 dependencies -->
+  <depend>event_camera_msgs</depend>
+  <depend>event_camera_codecs</depend>  
+  <buildtool_depend>ros_environment</buildtool_depend> <!-- ROS_VERSION + ROS_DISTRO -->
+  
+  <export>
+    <!-- this is crucial else the package will not be registered! -->
+    <build_type condition="$ROS_VERSION == 1">catkin</build_type>
+    <build_type condition="$ROS_VERSION == 2">ament_cmake</build_type>
+  </export>
+
+</package>

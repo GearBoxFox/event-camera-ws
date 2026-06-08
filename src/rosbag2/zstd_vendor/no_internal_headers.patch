@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5208c1050702d188d655a7506a6367b97547bb0e048a375e1432d97ed17ae09b
-size 815
+From e85114a0200c06dc5bb523a6b5764e938b0e8047 Mon Sep 17 00:00:00 2001
+From: James Smith <james@foxglove.dev>
+Date: Thu, 1 Dec 2022 09:57:11 +1100
+Subject: [PATCH] Don't install internal headers
+
+Signed-off-by: James Smith <james@foxglove.dev>
+---
+ build/cmake/lib/CMakeLists.txt | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/build/cmake/lib/CMakeLists.txt b/build/cmake/lib/CMakeLists.txt
+index 7adca875..c66380b9 100644
+--- a/build/cmake/lib/CMakeLists.txt
++++ b/build/cmake/lib/CMakeLists.txt
+@@ -147,9 +147,6 @@ endif ()
+ # install target
+ install(FILES
+     ${LIBRARY_DIR}/zstd.h
+-    ${LIBRARY_DIR}/deprecated/zbuff.h
+-    ${LIBRARY_DIR}/dictBuilder/zdict.h
+-    ${LIBRARY_DIR}/dictBuilder/cover.h
+     ${LIBRARY_DIR}/common/zstd_errors.h
+     DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}")
+ 
+-- 
+2.34.1
+

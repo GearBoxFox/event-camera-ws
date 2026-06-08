@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:94eaef7bf1c741d1e5dd5e256d78c85b0868be54b627ed97683cae8d67c9894f
-size 262
+repositories:
+  event_camera_msgs:
+    type: git
+    url: https://github.com/ros-event-camera/event_camera_msgs.git
+    version: master
+  event_camera_codecs:
+    type: git
+    url: https://github.com/ros-event-camera/event_camera_codecs.git
+    version: master

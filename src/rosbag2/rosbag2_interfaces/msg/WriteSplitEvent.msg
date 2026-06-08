@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0053a84e0e27811ec4e0de46b1d2c24bc942fa4f5584ed6bad57ebe7eeff7be9
-size 166
+# The full path of the file that was finished and closed
+string closed_file
+# The full path of the new file that was created to continue recording
+string opened_file

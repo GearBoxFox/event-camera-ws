@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:853dc8558fddb63c43e6415866ccc91511de8d2fe0292345b283f1ec28953fbe
-size 373
+# ros2-metavision-drivers
+A workspace containing the needed packages to work with any Prophesee or third-party branded event based camera in ROS2. Packages to work with the Inivation dvXplore cameras will also be added. Also includes tools to do intrensic calibration of event cameras.
+
+## Dependancies
+- Metavision SDK 4.2 or greater
+- ROS2 Humble
+- Python 3.7 or greater

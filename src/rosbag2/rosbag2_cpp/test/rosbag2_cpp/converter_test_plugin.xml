@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:37b3e83b182d0baf0243fa3f662a41e317bd9c9e26b6d45f7ae80cab843e358a
-size 525
+<library path="converter_test_plugins">
+  <class
+    name="a_converter"
+    type="ConverterTestPlugin"
+    base_class_type="rosbag2_cpp::converter_interfaces::SerializationFormatConverter"
+  >
+    <description>This is a test format converter plugin.</description>
+  </class>
+
+  <class
+    name="s_converter"
+    type="SerializerTestPlugin"
+    base_class_type="rosbag2_cpp::converter_interfaces::SerializationFormatSerializer"
+  >
+    <description>This is a test format serializer plugin.</description>
+  </class>
+</library>

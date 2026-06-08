@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:881cbbb5930f8380e6873f828b35ac668e6b67f661a82860c986a99c69ec4d23
-size 1027
+// Copyright 2021, Robotec.ai sp. z o.o.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+#ifndef ROSBAG2_PERFORMANCE_BENCHMARKING__BAG_CONFIG_HPP_
+#define ROSBAG2_PERFORMANCE_BENCHMARKING__BAG_CONFIG_HPP_
+
+#include <string>
+#include "rosbag2_storage/storage_options.hpp"
+
+struct BagConfig
+{
+  rosbag2_storage::StorageOptions storage_options;
+  std::string compression_format;
+  unsigned int compression_queue_size;
+  unsigned int compression_threads;
+};
+
+#endif  // ROSBAG2_PERFORMANCE_BENCHMARKING__BAG_CONFIG_HPP_

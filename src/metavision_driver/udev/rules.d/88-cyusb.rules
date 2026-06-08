@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bd325c1fa39601c6b2d3521f962a22269ee8218ff16b0cfb42d434a947a69c96
-size 591
+# Cypress USB driver for FX2 and FX3 (C) Cypress Semiconductor Corporation / ATR-LABS
+# Rules written by V. Radhakrishnan ( rk@atr-labs.com )
+# Cypress USB vendor ID = 0x04b4
+# Note: The cy_renumerate.sh script is required only when using Cypress SDK cyusb_linux tool (to flash via USB)
+KERNEL=="*", SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ACTION=="add", ATTR{idVendor}=="04b4", MODE="666", TAG="cyusb_dev", RUN+="/usr/local/bin/cy_renumerate.sh A"
+KERNEL=="*", SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ACTION=="remove", TAG=="cyusb_dev", RUN+="/usr/local/bin/cy_renumerate.sh R"

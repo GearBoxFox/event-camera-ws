@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5d544c5be08ecce9b0b3244f408de2641d6c1f12783cc382d3b99a3062a544d9
-size 121
+299  % bias_diff
+221  % bias_diff_off
+384  % bias_diff_on
+1477 % bias_fo
+1499 % bias_hpf
+1250 % bias_pr
+1500 % bias_refr

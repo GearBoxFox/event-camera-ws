@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1268bda5148603e4b4d556ab57a5c6fcd44cce53beeff7b26f5dbe91d1d47439
-size 779
+---
+Language: Cpp
+Standard: c++17
+BasedOnStyle: Google
+
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortLambdasOnASingleLine: Empty
+AccessModifierOffset: -2
+TabWidth: 2
+ContinuationIndentWidth: 2
+UseTab: Never
+BreakConstructorInitializers: BeforeComma
+BraceWrapping:
+  AfterClass: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  AfterEnum: true
+BreakBeforeBraces: Custom
+ColumnLimit: 100
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+DerivePointerAlignment: false
+FixNamespaceComments: true
+PointerAlignment: Middle
+ReflowComments: false
+SortIncludes: true
+IndentPPDirectives: BeforeHash
+
+IncludeCategories:
+  - Regex: '^"'
+    Priority: 1
+  - Regex: "^<mcap"
+    Priority: 2
+  - Regex: "^<.*/"
+    Priority: 3
+  - Regex: "^<.*"
+    Priority: 4

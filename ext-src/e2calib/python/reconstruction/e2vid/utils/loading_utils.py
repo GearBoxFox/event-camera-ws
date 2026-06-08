@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:79d5fe775821994eb26ee17e44fdb312a040ee1918b3ab78d4bf27926b67b28c
-size 729
+import torch
+from e2vid.model.model import *
+
+
+def load_model(path_to_model, device="cpu"):
+    print('Loading model {}...'.format(path_to_model))
+    raw_model = torch.load(path_to_model, map_location=device)
+    arch = raw_model['arch']
+
+    try:
+        model_type = raw_model['model']
+    except KeyError:
+        model_type = raw_model['config']['model']
+
+    # instantiate model
+    model = eval(arch)(model_type)
+
+    # load model weights
+    model.load_state_dict(raw_model['state_dict'])
+
+    return model
+
+
+def get_device(use_gpu, gpu_id):
+    if use_gpu and torch.cuda.is_available():
+        device = torch.device(gpu_id)
+    else:
+        device = torch.device('cpu')
+    print('Device:', device)
+
+    return device

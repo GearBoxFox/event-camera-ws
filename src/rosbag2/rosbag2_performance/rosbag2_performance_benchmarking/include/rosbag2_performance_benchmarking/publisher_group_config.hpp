@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8dcfa744cfafa2d8bf5248f7613fa8f0825d0531677cb2760614a31dd7c5fdbc
-size 1113
+// Copyright 2020-2021, Robotec.ai sp. z o.o.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+#ifndef ROSBAG2_PERFORMANCE_BENCHMARKING__PUBLISHER_GROUP_CONFIG_HPP_
+#define ROSBAG2_PERFORMANCE_BENCHMARKING__PUBLISHER_GROUP_CONFIG_HPP_
+
+#include <string>
+#include "rosbag2_performance_benchmarking/producer_config.hpp"
+#include "rclcpp/qos.hpp"
+
+struct PublisherGroupConfig
+{
+  PublisherGroupConfig()
+  : count(0), qos(10) {}
+  unsigned int count;
+  ProducerConfig producer_config;
+  std::string topic_root;
+  rclcpp::QoS qos;
+};
+
+#endif  // ROSBAG2_PERFORMANCE_BENCHMARKING__PUBLISHER_GROUP_CONFIG_HPP_

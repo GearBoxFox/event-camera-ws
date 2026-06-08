@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5576a8d02ece89ace8ea92d3826b465519d68389bb6686a9381c3d4f5b8388f9
-size 694
+from setuptools import find_packages, setup
+
+package_name = 'bias_tuner'
+
+setup(
+    name=package_name,
+    version='0.0.0',
+    packages=find_packages(exclude=['test']),
+    data_files=[
+        ('share/ament_index/resource_index/packages',
+            ['resource/' + package_name]),
+        ('share/' + package_name, ['package.xml']),
+    ],
+    install_requires=['setuptools'],
+    zip_safe=True,
+    maintainer='locobot',
+    maintainer_email='favoringbasil55@gmail.com',
+    description='TODO: Package description',
+    license='Apache-2.0',
+    extras_require={
+        'test': [
+            'pytest',
+        ],
+    },
+    entry_points={
+        'console_scripts': [
+        ],
+    },
+)

@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0c94e0f49a020054e2440820076fa8529a51eac750d49e71c99c3d7b5b972e7b
-size 335
+<launch>
+  <arg name="bias_file" default=""/>
+  <node pkg="metavision_driver" type="sync_test" name="sync_test" clear_params="true"
+	output="screen">
+    <param name="use_ros_time" value="false"/>
+    <remap from="~events_cam_0" to="/event_cam_0/events"/>
+    <remap from="~events_cam_1" to="/event_cam_1/events"/>
+  </node>
+</launch>
