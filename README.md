@@ -2,14 +2,14 @@
 A workspace containing the needed packages to work with any Prophesee or third-party branded event based camera in ROS2. Packages to work with the Inivation dvXplore cameras will also be added. Also includes tools to do intrensic calibration of event cameras.
 
 ## Dependancies
----
+
 - Metavision SDK 4.2 or greater
 - ROS2 Humble
 - Python 3.7 or greater
 
 
 ## Usage
----
+
 #### Cablibrate (Metavision SDK)
 1. Collect a `.raw` recording file by running `python3 ext-src/recorder.py` in your desired directory.
 2. Convert the `.raw` recording into a `.dat` recording using `metavision_file_to_dat -i file.raw`
