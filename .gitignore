@@ -18,3 +18,9 @@ src/rosbag2/ros2bag/test/resources/empty_bag/
 
 ext-src/e2calib/python/frames/e2calib/*.png
 ext-src/e2calib/python/build/*
+
+build/
+
+install/
+
+log/
