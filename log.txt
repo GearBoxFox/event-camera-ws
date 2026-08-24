@@ -1,0 +1,6 @@
+Starting >>> apriltags_catkin
+
+Summary: 0 packages finished [5.01s]
+  1 package failed: apriltags_catkin
+  1 package had stderr output: apriltags_catkin
+  1 package not processed
